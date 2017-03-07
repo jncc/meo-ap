@@ -1,0 +1,99 @@
+html {
+  overflow-y: scroll;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  min-height: 100px;
+  padding-top: 70px;
+}
+h1 {
+  color: green;
+  font-weight: 900;
+}
+.map {
+  height: 600px;
+  z-index: 0;
+}
+.form {
+  margin-bottom: 30px;
+}
+.form .form-control {
+  width: 140px;
+}
+.form > div {
+  padding-right: 1.5em;
+}
+.form > div > label {
+  padding-right: 0.5em;
+}
+.item {
+  display: flex;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 4px;
+  padding: 2px 2px;
+  margin-bottom: 4px;
+}
+.item .item-left {
+  flex: 0;
+  padding: 0 4px;
+}
+.item .item-left > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.item .item-left > div > div {
+  flex: 1;
+}
+.item .item-main {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0 4px 0 4px;
+}
+.item .item-main .item-main-title {
+  font-size: 130%;
+}
+.item .item-main .item-main-property-label {
+  color: #888;
+  padding-right: 0.3em;
+}
+.item .item-main .item-main-property-value {
+  padding-right: 0.6em;
+}
+.item .item-right {
+  flex: 0;
+  padding: 4px 4px;
+  white-space: nowrap;
+  text-align: right;
+}
+.item .item-right > div {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.item .item-right > div > div {
+  flex: 1;
+}
+.item .item-right .item-right-download-type {
+  color: #888;
+}
+.hoveredx {
+  color: red;
+}
+.summary {
+  position: fixed;
+  bottom: 0px;
+  background-color: white;
+  width: 100%;
+  padding: 10px 15px;
+}
+.summary > div > span {
+  padding-right: 20px;
+}
+.summary > div > span .summary-count {
+  font-size: 400%;
+}

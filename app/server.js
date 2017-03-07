@@ -6,14 +6,20 @@ var app = express();
 nunjucks.configure('views', { autoescape : true, express : app });
 
 app.set("view engine", "nunjucks");
-app.use(express.static('public'));
+app.use(express.static('app/public'));
 
 app.get('/', function(req, res) {
-    res.render('index.html', {});
+    res.render('index.html', {
+        products : [
+            { id : 'chloro-a-m', name : 'Chlorophyll-A Monthly', files : 220 },
+            { id : 'chloro-a-5d', name : 'Chlorophyll-A 5-day', files : 1341 },
+            { id : 'chloro-a-d', name : 'Chlorophyll-A Daily', files : 6666 }
+        ]
+    });
 });
 
-app.get('/:product', function(req, res) {
-
+app.get('/data/:product', function(req, res) {
+    res.sendStatus(200);
 });
 
 app.listen(5000, () => {
