@@ -1,0 +1,24 @@
+{% include "fragments/head.html" %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h2>{{ product.name }}</h2>
+            <p>
+                The following scenes are available to download:
+            </p>
+            {% for dataset in data %}
+                <div class="item">
+                    <div class="item-left">*</div>
+                    <div class="item-main">
+                        <span class="item-main-title">{{ dataset.title }}</span><br />
+                        <span class="item-main-property-label">startdate</span><span class="item-main-property-value">{{ moment(dataset.startdate).format('DD MMM YYYY') }}</span>
+                        <span class="item-main-property-label">enddate</span><span class="item-main-property-value">{{ moment(dataset.enddate).format('DD MMM YYYY') }}</span>
+                    </div>
+                    <div class="item-right"><span class="item-right-download-type">Geotiff</span><br /><span>1 MB</span></div>
+                    <div class="item-right"><a href="{{ dataset.location }}" class="btn btn-default">Download</a></div>
+                </div>
+            {% endfor %}            
+        </div>
+    </div>
+</div>
+{% include "fragments/foot.html" %}
