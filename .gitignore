@@ -1,3 +1,3 @@
 # node build folders
 node_modules/
-app/cfg.js
+.env

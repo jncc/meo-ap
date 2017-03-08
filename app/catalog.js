@@ -1,7 +1,6 @@
 var pgp = require('pg-promise')();
-var cfg = require('./cfg.js');
 
-var db = pgp(cfg.conn);
+var db = pgp(process.env.PGCONN);
 
 var getDatasets = function(product) {
     return db.many({
