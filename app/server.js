@@ -32,6 +32,6 @@ app.get('/data/:product', function(req, res) {
     });
 });
 
-app.listen(5000, () => {
-    console.log('Server operational on port 5000');
+app.listen(process.env.PORT, () => {
+    console.log('Server operational');
 });
