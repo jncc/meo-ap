@@ -1,7 +1,7 @@
 var pgp = require('pg-promise')();
 
-//var connectionString = `postgres://${process.env.PGCONN}@172.31.17.103:5432/topsat`;
-var connectionString = `postgres://${process.env.PGCONN}@ec2-52-212-152-232.eu-west-1.compute.amazonaws.com:5432/topsat`;
+var connectionString = `postgres://${process.env.PGCONN}@172.31.17.103:5432/topsat`;
+//var connectionString = `postgres://${process.env.PGCONN}@ec2-52-212-152-232.eu-west-1.compute.amazonaws.com:5432/topsat`;
 
 var db = pgp(connectionString);
 
