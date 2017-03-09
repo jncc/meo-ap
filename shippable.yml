@@ -4,15 +4,14 @@ language: node_js
 node_js:
   - 4.2.6
 
-# only build master and all branches beginning with "beta"
 branches:
   only:
-    - master # - beta*
-    - dockerless
+    - master
 
 build:
   ci:
     - npm install
+    - pip install --upgrade botocore # workaround https://github.com/Shippable/support/issues/3304
     - pip install setuptools==34.0.1
 
 integrations:
@@ -21,7 +20,7 @@ integrations:
       type: aws
       target: eb_paas
       platform: "Node.js"
-      application_name: meoap
-      env_name: meoap-live
+      application_name: meo-ap
+      env_name: meo-ap-live
       region: "eu-west-1"
 
