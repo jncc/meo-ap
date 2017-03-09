@@ -23,18 +23,22 @@ app.get('/', function(req, res) {
 });
 
 app.get('/data/:product/:start/:end', function(req, res) {
-    var sm = moment(req.params.start);
-    var em = moment(req.params.end);
+    try {
+        var sm = moment(req.params.start);
+        var em = moment(req.params.end);
 
-    catalog.getDatasetsByDate(products[req.params.product].catalogProduct, sm, em).then(datasets => {
-        res.render('data.html', {
-            product : products[req.params.product],
-            data : datasets,
-            moment : moment,
-            start : sm.format('YYYY-MM-DD'),
-            end : em.format('YYYY-MM-DD')
+        catalog.getDatasetsByDate(products[req.params.product].catalogProduct, sm, em).then(datasets => {
+            res.render('data.html', {
+                product : products[req.params.product],
+                data : datasets,
+                moment : moment,
+                start : sm.format('YYYY-MM-DD'),
+                end : em.format('YYYY-MM-DD')
+            });
         });
-    });
+    } catch (e) {
+        res.sendStatus(500);
+    }
 });
 
 app.listen(process.env.PORT, () => {
