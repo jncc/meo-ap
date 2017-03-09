@@ -41,6 +41,14 @@ app.get('/data/:product/:start/:end', function(req, res) {
     }
 });
 
+app.get('/about', function(req, res) {
+    res.render('about.html');
+});
+
+app.get('/contact', function(req, res) {
+    res.render('contact.html');
+});
+
 app.listen(process.env.PORT, () => {
     console.log('Server operational on port ' + process.env.PORT);
 });
