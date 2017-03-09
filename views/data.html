@@ -3,6 +3,17 @@
     <div class="row">
         <div class="col-md-9">
             <h2>{{ product.name }}</h2>
+            <div class="form-inline form">
+                <div class="form-group">
+                    <label>From</label>
+                    <input type="text" value="{{ start }}" class="form-control" placeholder="Start date" id="from">
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <input type="text" value="{{ end }}" class="form-control" placeholder="End date" id="to">
+                </div>
+                <button class="btn btn-danger" id="update">Update</button>
+            </div>
             <p>
                 The following scenes are available to download:
             </p>
@@ -21,4 +32,11 @@
         </div>
     </div>
 </div>
+<script>
+    $(function() {
+        $('#update').click(function() {
+            window.location = '/data/{{ product.id }}/' + $('#from').val() + '/' + $('#to').val();
+        });
+    })    
+</script>
 {% include "fragments/foot.html" %}
