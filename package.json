@@ -6,8 +6,6 @@
   "license": "OGL",
   "scripts": {
     "dev": "nodemon app/server.js",
-    "test": "karma start --single-run",
-    "test:watch": "karma start",
     "start": "node app/server.js"
   },
   "dependencies": {
@@ -22,7 +20,7 @@
     "rimraf": "2.5.4"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": "4.2.6"
   }
 }
 

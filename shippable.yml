@@ -1,0 +1,27 @@
+
+language: node_js
+
+node_js:
+  - 4.2.6
+
+# only build master and all branches beginning with "beta"
+branches:
+  only:
+    - master # - beta*
+    - dockerless
+
+build:
+  ci:
+    - npm install
+    - pip install setuptools==34.0.1
+
+integrations:
+  deploy:
+    - integrationName: "aws-jncc-prod-subscription-integration"
+      type: aws
+      target: eb_paas
+      platform: "Node.js"
+      application_name: meoap
+      env_name: meoap-live
+      region: "eu-west-1"
+
