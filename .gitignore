@@ -1,3 +1,4 @@
 # node build folders
 node_modules/
+npm-debug.log
 .env
