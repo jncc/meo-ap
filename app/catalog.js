@@ -1,6 +1,8 @@
 var pgp = require('pg-promise')();
 
-var db = pgp(process.env.PGCONN);
+var connectionString = `postgres://${process.env.PGCONN}@172.31.17.103:5432/topsat`;
+
+var db = pgp(connectionString);
 
 var getDatasets = function(product) {
     return db.many({
