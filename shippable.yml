@@ -4,11 +4,9 @@ language: node_js
 node_js:
   - 4.2.6
 
-# only build master and all branches beginning with "beta"
 branches:
   only:
-    - master # - beta*
-    - dockerless
+    - master
 
 build:
   ci:
@@ -21,7 +19,7 @@ integrations:
       type: aws
       target: eb_paas
       platform: "Node.js"
-      application_name: meoap
-      env_name: meoap-live
+      application_name: meo-ap
+      env_name: meo-ap-live
       region: "eu-west-1"
 
