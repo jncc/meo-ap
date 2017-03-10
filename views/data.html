@@ -26,6 +26,7 @@
                         <span class="item-main-property-label">enddate</span><span class="item-main-property-value">{{ moment(dataset.enddate).format('DD MMM YYYY') }}</span>
                     </div>
                     <div class="item-right"><span class="item-right-download-type">Geotiff</span><br /><span>1 MB</span></div>
+                    <div class="item-right"><a href="/metadata/{{ product.id }}/{{ moment(dataset.startdate).format('YYYY-MM-DD') }}/{{ moment(dataset.enddate).format('YYYY-MM-DD') }}/" class="btn btn-default">Metadata</a></div>
                     <div class="item-right"><a href="{{ dataset.location }}" class="btn btn-default">Download</a></div>
                 </div>
             {% endfor %}            

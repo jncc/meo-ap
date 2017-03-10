@@ -42,6 +42,25 @@ app.get('/data/:product/:start/:end', function(req, res) {
     }
 });
 
+app.get('/metadata/:product/:start/:end', function(req, res) {
+    try {
+        var sm = moment(req.params.start);
+        var em = moment(req.params.end);
+
+        catalog.getDatasetsByDate(products[req.params.product].catalogProduct, sm, em).then(datasets => {
+            res.render('metadata.html', {
+                product : products[req.params.product],
+                data : datasets[0],
+                moment : moment,
+                start : sm.format('YYYY-MM-DD'),
+                end : em.format('YYYY-MM-DD')
+            });
+        });
+    } catch (e) {
+        res.sendStatus(500);
+    }
+});
+
 app.get('/about', function(req, res) {
     res.render('about.html');
 });

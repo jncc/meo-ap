@@ -1,0 +1,164 @@
+{% include "fragments/head.html" %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <h2>{{ data.title }}</h2>
+            <table class="table table-striped">
+                <tr>
+                    <td>
+                        Title
+                    </td>
+                    <td>
+                        {{ data.title }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Abstract
+                    </td>
+                    <td>
+                        <p>
+                            The European Space Agency’s Climate Change Initiative (CCI) programme generates error-characterised and validated Essential Climate Variables (ECVs) from observations measured by a range of satellites (http://www.esa-cci.org/). The ECV products were designed for climate studies and include ocean colour (OC-CCI), sea surface temperature (SST-CCI), sea level (SL-CCI, and sea ice (SI-CCI).  
+                        </p>
+                        <p>
+                            Phytoplankton are listed as an ECV under ocean colour (OC). These microscopic marine plants are found in every ocean on our planet and compose the base of the marine food web. Like terrestrial plants, they contain photosynthetic pigments and require sunlight (plus nutrients) to grow. By remotely measuring their photosynthetic pigment Chlorophyll-a (Chl-a), spatio-temporal patterns of phytoplankton abundance can be applied as an indicator of marine health and ecosystem functioning. Furthermore, Chl-a is practical to measure on both economic and technical scales.
+                        </p>
+                        <p>
+                            Plymouth Marine Labs (PML) leads the OC-CCI project and provides ocean colour products by “band-shifting and bias-correcting MERIS, MODIS and VIIRS data to match SeaWiFS data, merging the datasets and computing per-pixel uncertainty estimates” (Grant et al., 2016 D3.4 Product User Guide). The UK-wide Chl-a product hosted by MEO-AP on this EO Collaborative Platform is a subset of the freely available v3.0 global dataset of ‘chlor_a’.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Topic Category
+                    </td>
+                    <td>
+                        Marine Living Maps
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Keywords
+                    </td>
+                    <td>
+                        ‘chlor_a’, ‘phytoplankton’, ‘ocean colour’, ‘european space agency’, ‘OC-CCI’, ‘Chl-a concentration’, ‘chlorophyll’, ‘essential climate variable’, ‘marine’
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Temporal Resolution
+                    </td>
+                    <td>
+                        {{ product.id }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Temporal Extent
+                    </td>
+                    <td>
+                        {{ moment(start).format('DD MMM YYYY') }} - {{ moment(end).format('DD MMM YYYY') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Dataset Reference Date
+                    </td>
+                    <td>
+                        March 2017
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Lineage
+                    </td>
+                    <td>
+                        Chl-a from a blended combination of OC3, OCI (OC4+CI) and OC5 algorithms
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Responsible Organisation
+                    </td>
+                    <td>
+                        Plymouth Marine Labs for the European Space Agency’s Climate Change Initiative (CCI) programme. Cefas and JNCC for MEO-AP
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Access Limitations
+                    </td>
+                    <td>
+                        None
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Use Constraints
+                    </td>
+                    <td>
+                        Open Government Licence v3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Metadata Date
+                    </td>
+                    <td>
+                        2017-03-10
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Metadata Point of Contact
+                    </td>
+                    <td>
+                        earthobs@jncc.gov.uk
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Resource Type
+                    </td>
+                    <td>
+                        Dataset
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Bounding Box
+                    </td>
+                    <td>
+                        UK waters (Longitude = [-24 6], Latitude = [48 63])
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Spatial Reference System
+                    </td>
+                    <td>
+                        WGS-84 (EPSG:4326) 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Spatial Resolution
+                    </td>
+                    <td>
+                        4km
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Data Format
+                    </td>
+                    <td>
+                        Geotiff
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+{% include "fragments/foot.html" %}
