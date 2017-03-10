@@ -11,6 +11,7 @@ app.set("view engine", "nunjucks");
 app.use(express.static('app/public'));
 
 var products = {
+    yearly : { id : 'yearly', name : 'Chlorophyll-a Concentration for UK Waters - Yearly', files : 19, catalogProduct : 'yearly' },
     monthly : { id : 'monthly', name : 'Chlorophyll-a Concentration for UK Waters - Monthly', files : 220, catalogProduct : 'monthly' },
     fiveday : { id : 'fiveday', name : 'Chlorophyll-a Concentration for UK Waters - 5-day', files : 1341, catalogProduct : '5day' },
     daily : { id : 'daily', name : 'Chlorophyll-a Concentration for UK Waters - Daily', files : 6666, catalogProduct : 'daily' }
